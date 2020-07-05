@@ -72,3 +72,22 @@ body {
 .message{
 	color:red;
 }
+
+
+input{
+	
+width:25%;
+margin:5px 0;
+border: 0px solid #CCB3AE;
+padding:5px;
+box-shadow :0px 0px 15px rgba(0,0,0,0.22); 
+
+}
+
+input[type=submit]
+{
+	background-color:#D9CFAF;
+	width:15%;		
+}
+
+

@@ -1,119 +1,54 @@
-<!-- css -->
 
-<style type="text/css">  
-      
-        .showSlide {  
-            display: none  
-        }  
-            .showSlide img {  
-                width: 100%;  
-            }  
-        .slidercontainer {  
-            max-width: 1000px;  
-            position: relative;  
-            margin: auto;  
-            display: flex;
-        }  
-        .left, .right {  
-            cursor: pointer;  
-            position: absolute;  
-            top: 50%;  
-            width: auto;  
-            padding: 16px;  
-            margin-top: -22px;  
-            color: white;  
-            font-weight: bold;  
-            font-size: 18px;  
-            transition: 0.6s ease;  
-            border-radius: 0 3px 3px 0;  
-        }  
-        .right {  
-            right: 0;  
-            border-radius: 3px 0 0 3px;  
-        }  
-            .left:hover, .right:hover {  
-                background-color: rgba(115, 115, 115, 0.8);  
-            }  
-        .content {  
-            color: #eff5d4;  
-            font-size: 30px;  
-            padding: 8px 12px;  
-            position: absolute;  
-            top: 10px;  
-            width: 100%;  
-            text-align: center;  
-        }  
-        .active {  
-            background-color: #717171;  
-        }  
-        /* Fading animation */  
-        .fade {  
-            -webkit-animation-name: fade;  
-            -webkit-animation-duration: 1.5s;  
-            animation-name: fade;  
-            animation-duration: 1.5s;  
-        }  
-        @-webkit-keyframes fade {  
-            from {  
-                opacity: .4  
-            }  
-            to {  
-                opacity: 1  
-            }  
-        }  
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 20%;
+    height: 20%;
+    
+  }
+  </style>
+</head>
+<body>
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
   
-        @keyframes fade {  
-            from {  
-                opacity: .4  
-            }  
-            to {  
-                opacity: 1  
-            }  
-        }  
-    </style>  
-
-
-<!-- html -->
-<div class ="slidercontainer">
-   <div class ="showSlider fade">
-   
-     <img src="./images/DRESS1.jpg" alt="Dress1"/>    
-   </div>
-  <div class ="showSlider fade">
-     <img src="./images/DRESS2.jpg" alt="Dress1"/>    
-   </div>
-  <div class ="showSlider fade">
-     <img src="./images/DRESS3.jpg" alt="Dress1"/>    
-   </div>
-  <div class ="showSlider fade">
-     <img src="./images/DRESS4.jpg" alt="Dress1"/>    
-   </div>
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/DRESS1.jpg" alt="Los Angeles" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="/images/DRESS2.jpg" alt="Chicago" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="/images/DRESS3.jpg" alt="New York" width="1100" height="500">
+    </div>
+  </div>
   
-   
-      <!-- Navigation arrow -->
- <a class ="left" onclick="nextSlide(-1)"><</a>
- <a class ="right" onclick="nextSlide(1)"><</a>
-
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
 </div>
 
-<script type="text/javascript">  
-
-        var slide_index = 1;  
-        displaySlides(slide_index);  
-        function nextSlide(n) {  
-            displaySlides(slide_index += n);  
-        }  
-        function currentSlide(n) {  
-            displaySlides(slide_index = n);  
-        }  
-        function displaySlides(n) {  
-            var i;  
-            var slides = document.getElementsByClassName("showSlide");  
-            if (n > slides.length) { slide_index = 1 }  
-            if (n < 1) { slide_index = slides.length }  
-            for (i = 0; i < slides.length; i++) {  
-                slides[i].style.display = "none";  
-            }  
-            slides[slide_index - 1].style.display = "block";  
-        }  
-</script>   
+</body>
+</html>

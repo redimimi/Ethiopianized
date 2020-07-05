@@ -20,9 +20,16 @@
 <h3>Account information </h3>
 <form action="Update">
 
-First Name : <input type ="text" value="${customer.first_name}"/> <br>
-Last Name : <input type ="text" value="${customer.last_name}"><br>
-Email     :<input type ="text" value="${customer.email}">
+<lable for="fname">First Name :</lable><br>
+   <input type ="text" value="${customer.first_name}" id="fname"/> <br>
+
+<lable for="Lname" >Last Name :</lable> <br>
+   <input type ="text" value="${customer.last_name}" id="Lname"/><br>
+   
+<lable for="email">Email: </lable> <br>
+    <input type ="text" value="${customer.email}" id="email"/><br>
+    
+ <input type="submit" value="Update"> <input type="submit" value ="continue" >
 
 
 </form>

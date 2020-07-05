@@ -21,11 +21,13 @@
 
 	<img src="/images/lo.jpg">
 	<p>log in </p>
-     <form action="LoginUser">
-     User name :<input type ="text" placeholder="Name" name="user_name" > <br>
-     Password : <input type="password" placeholder="password" name="password" /> <br>
-     	<input type =submit value="submit">
-	</form>
+	
+ <form action="LoginUser">
+     
+        <input type ="text" placeholder="Name" name="user_name"  required> <br>
+        <input type="password" placeholder="password" name="password" required /> <br>
+     	        <input type =submit value="Log in ">
+</form>
 
 	<p> I don't have an account<p>
 	<strong><a href="signup">Sign Up</a></strong>

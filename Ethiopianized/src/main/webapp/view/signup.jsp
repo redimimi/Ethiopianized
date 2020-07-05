@@ -7,9 +7,6 @@
 <link href="/css/home.css" rel="stylesheet"/>
 <meta charset="ISO-8859-1">
 </head>
-
-
-
 <body>
 <div class="App">
 <div class="pattern"></div>
@@ -23,42 +20,33 @@
 <p class="message"> ${message.getMname()}</p>
 <img src="/images/lo.jpg">
 
-<form action="addUser" id="form">
-
-
-
-First Name :<input type="text" name = "first_name"/><br>
-Last name  :<input type="text" name ="last_name"/><br>
-Email      :<input type="text" name ="email"/> <br>
-User name  :<input type="text" name ="user_name"/> <br>
-Password   :<input type="password" name = password id ="pass"/><br>
-Confirm password :<input type ="password" id= conpass/> <br> 
- <input type ="submit"> 
+ <form action="addUser">
  
-</form>
+  <lable for="fname"></lable>
+     <input type="text" name ="first_name" required placeholder="First Name ..." id="fname"/> <br>
+   
+  <lable for="Lname"></lable>
+     <input type="text" name ="last_name" required placeholder="Last Name ..." id="Lname"/><br>
+    
+  <lable for="email"></lable> 
+      <input type="email" name ="email" required placeholder="Email@...com  " id="email" /><br>
+    
+ <lable for="UName" ></lable> 
+   <input type="text" name ="user_name"  required placeholder="User Name ..." id="UName"/><br>
+ 
+ <lable for="Password"></lable> 
+     <input type="password" name = password  required placeholder="Password...." id ="pass"/><br>
+     
+ <lable for="conform_passsword"></lable>
+    <input type = "password"  name ="confirm_password" required placeholder="Comform password" id="conform_passsword"/><br>
+    
+  <lable for ="submit"/>
+    <input type="submit"  value ="Sign up">
+    
+</form>  
 
 </div>
-<script type="webjars/jquery/1.7.2/jquery.min.js"></script>
-
-<script type="text/javascript">
-
-var form = $("#form");
-form.on("submit",fuction(e){
-	e.preventDefualt();
-	
-	var password = $("#pass").val();                           
-	var confirm = $("#conpass").val();
-	
-	if (password != confirm){
-		$(this).prepend("<p style='color:red'>The password dosnt match </p>")
-		
-	}
-	
-})
-
-
-
-</script>
 <div class="pattern"></div>
 </div>
+</body>
 </html>
