@@ -1,0 +1,51 @@
+@charset "ISO-8859-1";
+
+#mainNav {
+    background-color:#fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+
+#mainNav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+#mainNav li {
+    color: black;
+    margin: 10px 20px;
+    cursor: pointer;
+    
+}
+
+#mainNav li a:visited {
+    color: #000;
+}
+
+#mainNav li a {
+    text-decoration: none;
+}
+
+#mainNav li.active a{
+    color:rgb(209, 173, 12); 
+}
+
+#mainNav li:first-of-type {
+    margin-left: 0;
+}
+
+#basket {
+    width: 45px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#cart {
+    display: flex;
+    align-items: center;
+}
