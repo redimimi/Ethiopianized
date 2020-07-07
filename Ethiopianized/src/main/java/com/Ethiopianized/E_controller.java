@@ -4,7 +4,6 @@ package com.Ethiopianized;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -58,7 +57,7 @@ public class E_controller {
 		 
 		 Message ms = new Message();
 		 
-		 String message ="You Don't have acount would you like to sign in  ";
+		 String message ="You Don't have acount would you like to sign up  ";
 		 ms.setMname(message);
 		  
 		 mv.addObject("message",ms);
@@ -69,19 +68,43 @@ public class E_controller {
 	     {
 	 Users Customer = new Users();//creating a new object blank object 
 	 
-	 Customer.setUser_name(user.get(0).getUser_name());
+	 Customer.setusername(user.get(0).getusername());
 	 Customer.setPassword(user.get(0).getPassword());
 	 Customer.setFirst_name(user.get(0).getFirst_name());
 	 Customer.setLast_name(user.get(0).getLast_name());
 	 Customer.setEmail(user.get(0).getEmail());
 	 
-	 System.out.println(Customer.getUser_name());
+	 System.out.println(Customer.getusername());
 	 mv.addObject("customer",Customer);
     System.out.println(mv);
 	 return mv;
 	
 	
  }
+ }
+ 
+//update customers data 
+ @RequestMapping("Update")
+ 
+ public ModelAndView update(@RequestParam String username,Users User) 
+ {
+	 
+	 Message ms =new Message();
+	 ms.setMname("Your Information has been updated!");
+	 List<Users> user = rep.findByUsername(username);
+	 
+	 User.setPassword(user.get(0).getPassword());
+	 
+	 rep.save(User);
+	 
+	 ModelAndView mv = new ModelAndView();
+	 
+	 mv.addObject("message",ms);
+	 
+
+	 mv.setViewName("Account");
+	return mv;
+	 
  }
   }
   

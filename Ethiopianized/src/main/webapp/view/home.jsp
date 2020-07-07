@@ -24,13 +24,16 @@
 	
  <form action="LoginUser">
      
-        <input type ="text" placeholder="Name" name="user_name"  required> <br>
-        <input type="password" placeholder="password" name="password" required /> <br>
+        <input type ="text" placeholder="Name*......" name="username"  required> <br>
+        <input type="password" placeholder="password*....." name="password" required /> <br>
      	        <input type =submit value="Log in ">
 </form>
 
-	<p> I don't have an account<p>
-	<strong><a href="signup">Sign Up</a></strong>
+	<p> Don't have an account</p>
+		
+	<form action="/signup">
+        <input type="submit"  value="Sign up " />
+    </form>
 
 </div>
 <div class ="pattern"></div>

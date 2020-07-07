@@ -15,19 +15,25 @@
 <div class ="pattern"></div>
 <div id ="container">
 <jsp:include page="./components/NavBar.jsp"></jsp:include>
-<p> Welcome Back ${customer.user_name}</p>
+<p> Welcome Back ${customer.username}</p>
 
 <h3>Account information </h3>
+
+<p>${message.getMname()}<p>
+
 <form action="Update">
 
-<lable for="fname">First Name :</lable><br>
-   <input type ="text" value="${customer.first_name}" id="fname"/> <br>
+<label for="fname">First Name :</label><br>
+   <input type ="text" name="first_name" value="${customer.first_name}" id="fname"/> <br>
 
-<lable for="Lname" >Last Name :</lable> <br>
-   <input type ="text" value="${customer.last_name}" id="Lname"/><br>
+<label for="Lname" >Last Name :</label> <br>
+   <input type ="text" name="last_name" value="${customer.last_name}" id="Lname"/><br>
    
-<lable for="email">Email: </lable> <br>
-    <input type ="text" value="${customer.email}" id="email"/><br>
+<label for="email">Email: </label> <br>
+    <input type ="text" name="email" value="${customer.email}" id="email"/><br>
+    
+<label for ="username">User Name</label><br>
+    <input type="text" name ="username" value ="${customer.username}" id ="username" readonly/><br>
     
  <input type="submit" value="Update"> <input type="submit" value ="continue" >
 

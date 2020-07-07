@@ -6,16 +6,19 @@
 <div>
             <nav id="mainNav">
                 <ul>
+                
                     <li onClick={props.click} className={props.currentPage === "Home" ? "active" : ""}>
                         <a href="/">Home</a></li>
+                        
                     <li onClick={props.click} className={props.currentPage === "About" ? "active" : ""}>
                         <Link> About </Link> </li>
+                        
                     <li onClick={props.click} className={props.currentPage === "Contact Us" ? "active" : ""}>
                         <Link>  Contact Us </Link> </li>
+                        
                     <li onClick={props.click} className={props.currentPage === "login" ? "active" : ""}>
                         <a href="/signup">Signup</a></li>
-                    <li onClick={props.click} className={props.currentPage === "Try it on" ? "active" : ""}>
-                        <Link>Try it on </Link> </li>
+                   
 
                 </ul>
                 <div id="cart">

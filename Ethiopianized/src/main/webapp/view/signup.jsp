@@ -32,13 +32,13 @@
       <input type="email" name ="email" required placeholder="Email@...com  " id="email" /><br>
     
  <lable for="UName" ></lable> 
-   <input type="text" name ="user_name"  required placeholder="User Name ..." id="UName"/><br>
+   <input type="text" name ="username"  required placeholder="User Name ..." id="UName"/><br>
  
  <lable for="Password"></lable> 
      <input type="password" name = password  required placeholder="Password...." id ="pass"/><br>
      
  <lable for="conform_passsword"></lable>
-    <input type = "password"  name ="confirm_password" required placeholder="Comform password" id="conform_passsword"/><br>
+    <input type = "password"  name ="confirm_password" required placeholder="Comform password....." id="conform_passsword"/><br>
     
   <lable for ="submit"/>
     <input type="submit"  value ="Sign up">
