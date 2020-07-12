@@ -95,16 +95,36 @@ public class E_controller {
 	 
 	 User.setPassword(user.get(0).getPassword());
 	 
+	 Users Customer = new Users();//creating a new object blank object 
+	 
+	 Customer.setusername(User.getusername());
+	 Customer.setPassword(User.getPassword());
+	 Customer.setFirst_name(User.getFirst_name());
+	 Customer.setLast_name(User.getLast_name());
+	 Customer.setEmail(User.getEmail());
+	 
+	 
 	 rep.save(User);
 	 
 	 ModelAndView mv = new ModelAndView();
 	 
 	 mv.addObject("message",ms);
-	 
+	 mv.addObject("customer",Customer);
 
 	 mv.setViewName("Account");
+	 
 	return mv;
 	 
  }
+ 
+ 
+ /// this will take us too the learn with me pagae 
+ @RequestMapping("/learn")
+   public String Learn(){
+	   
+	   return("learn");
+	   
+	     
+   }
   }
   

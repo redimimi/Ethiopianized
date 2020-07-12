@@ -15,13 +15,13 @@
 <div class ="pattern"></div>
 <div id ="container">
 <jsp:include page="./components/NavBar.jsp"></jsp:include>
-<p> Welcome Back ${customer.username}</p>
+<span> Welcome Back ${customer.username} </span>
 
 <h3>Account information </h3>
 
-<p>${message.getMname()}<p>
+<p class="message">${message.getMname()}<p>
 
-<form action="Update">
+<form action="Update" method="post">
 
 <label for="fname">First Name :</label><br>
    <input type ="text" name="first_name" value="${customer.first_name}" id="fname"/> <br>
@@ -35,10 +35,11 @@
 <label for ="username">User Name</label><br>
     <input type="text" name ="username" value ="${customer.username}" id ="username" readonly/><br>
     
- <input type="submit" value="Update"> <input type="submit" value ="continue" >
-
-
+ <input type="submit" value="Update"> 
 </form>
+
+<input type="submit" value ="continue" >
+
 </div>
 <div class ="pattern"></div>
 </div>

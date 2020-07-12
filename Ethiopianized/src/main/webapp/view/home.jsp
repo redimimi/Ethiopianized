@@ -22,11 +22,15 @@
 	<img src="/images/lo.jpg">
 	<p>log in </p>
 	
- <form action="LoginUser">
-     
-        <input type ="text" placeholder="Name*......" name="username"  required> <br>
-        <input type="password" placeholder="password*....." name="password" required /> <br>
-     	        <input type =submit value="Log in ">
+<form action="LoginUser" method="post">
+ 
+     <label for="Uname"></label>
+        <input type ="text" placeholder="User Name*......" name="username"  required id ="Uname"> <br>
+
+      <label for = "paasword"></label>
+         <input type="password" placeholder="password*....." name="password" required /> <br>
+         
+     	        <input type =submit value="Log in">
 </form>
 
 	<p> Don't have an account</p>
@@ -34,8 +38,8 @@
 	<form action="/signup">
         <input type="submit"  value="Sign up " />
     </form>
-
 </div>
+
 <div class ="pattern"></div>
 </div>
 </body>

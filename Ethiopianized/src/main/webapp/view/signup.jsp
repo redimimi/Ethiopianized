@@ -13,34 +13,36 @@
 
 <div id ="container">
 <jsp:include page="./components/NavBar.jsp"></jsp:include>
-<p> welcome to the sign up page  </p>
+<p> Welcome to the sign up page  </p>
 
 
 
 <p class="message"> ${message.getMname()}</p>
 <img src="/images/lo.jpg">
 
- <form action="addUser">
+ <form action="addUser" method="post" id ="form">
  
-  <lable for="fname"></lable>
+  <label for="fname"></label>
      <input type="text" name ="first_name" required placeholder="First Name ..." id="fname"/> <br>
    
-  <lable for="Lname"></lable>
+  <label for="Lname"></label>
      <input type="text" name ="last_name" required placeholder="Last Name ..." id="Lname"/><br>
     
-  <lable for="email"></lable> 
+  <label for="email"></label> 
       <input type="email" name ="email" required placeholder="Email@...com  " id="email" /><br>
     
- <lable for="UName" ></lable> 
+ <label for="UName" ></label> 
    <input type="text" name ="username"  required placeholder="User Name ..." id="UName"/><br>
  
- <lable for="Password"></lable> 
+ <label for="Password"></label> 
      <input type="password" name = password  required placeholder="Password...." id ="pass"/><br>
      
- <lable for="conform_passsword"></lable>
-    <input type = "password"  name ="confirm_password" required placeholder="Comform password....." id="conform_passsword"/><br>
+ <label for="cpasssword"></label>
+    <input type = "password"  name ="confirm_password" required placeholder="Comform password....." id="cpassword"/><br>
     
-  <lable for ="submit"/>
+    
+  <label for ="submit"></label>
+  
     <input type="submit"  value ="Sign up">
     
 </form>  
