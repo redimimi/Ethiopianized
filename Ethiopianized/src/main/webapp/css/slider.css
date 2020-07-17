@@ -1,6 +1,27 @@
 @charset "ISO-8859-1";
-#carouselExampleControls{
-  display:flex;
- 
-  
+
+
+.slider-picture {
+  	width: 70%;
+  	height: auto;
+  	max-height: 300px;
+  	overflow: hidden;
+  	margin: 50px auto;
+}
+
+.slider-div {
+	margin: 0 40px;
+	transition: all 1s;
+	backface-visibilty: hidden;
+}
+
+.slick-current {
+	transform: scale(1.3);
+	transition: all 1s;
+}
+.slick-dots {
+    display: flex;
+    position: relative;
+    left: 600%;
+    list-style: none;
 }

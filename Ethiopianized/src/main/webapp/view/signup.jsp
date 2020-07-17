@@ -3,10 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Signup to Ethiopianized</title>
-<link href="/css/home.css" rel="stylesheet"/>
+<title> Sign up</title>
+<jsp:include page="./components/header.jsp"></jsp:include>
 <meta charset="ISO-8859-1">
 </head>
+
 <body>
 <div class="App">
 <div class="pattern"></div>

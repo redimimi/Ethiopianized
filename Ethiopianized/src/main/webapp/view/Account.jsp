@@ -5,10 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Your Account</title>
-
-<link href ="webjars/bootstrap/2.2.1/js/bootstrap.min.js"/>
-<link href="/css/home.css" rel="stylesheet"/>
-
+<jsp:include page="./components/header.jsp"></jsp:include>
 </head>
 <body>
 <div class ="App">

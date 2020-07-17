@@ -126,5 +126,10 @@ public class E_controller {
 	   
 	     
    }
+ 
+ @RequestMapping("/Mycart")
+   public String Mycart() {
+	 return("mycart");
+ }
   }
   

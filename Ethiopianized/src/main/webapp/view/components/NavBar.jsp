@@ -30,7 +30,7 @@
                 </ul>
                 <div id="cart">
                     <div>
-                        <img src="./images/basket.png" id="basket" />
+                       <a href="Mycart"><img src="./images/basket.png" id="basket" /></a>
                     </div>
                     <ul>
                         <li> My Cart (0)</li>

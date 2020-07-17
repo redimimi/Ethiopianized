@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+.v1{background:red;}
+.v2{background:yellow;}
+.v3{backgrounf:purpel;}
+.v4{background:pink;}
+.v5{background:green;}
+.v6{background:blue}
+
+.order{
+	display:flex;
+	min-height:100vh;
+	flex-wrap:wrap;
+}
