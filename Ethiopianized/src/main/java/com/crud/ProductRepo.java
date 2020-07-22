@@ -9,4 +9,6 @@ import com.pojos.Products;
 
 public interface ProductRepo extends JpaRepository<Products,Integer> {
 
+	List<Products> findByImage(String image);
+	
 }

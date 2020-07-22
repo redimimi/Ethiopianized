@@ -1,8 +1,12 @@
 package com.pojos;
 
 import javax.persistence.Entity;
+
 import javax.persistence.Id;
 
+import org.springframework.stereotype.Component;
+
+@Component 
 @Entity 
 public class Products {
 	@Id
@@ -10,8 +14,8 @@ public class Products {
 	private String Pname;
 	private String color;
 	private String image;
-	private int price;
-	private int size;
+	private String price;
+	private String size;
 	private boolean avelable;
 	
 	
@@ -39,16 +43,16 @@ public class Products {
 	public void setImage(String image) {
 		this.image = image;
 	}
-	public int getPrice() {
+	public String getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
-	public int getSize() {
+	public String getSize() {
 		return size;
 	}
-	public void setSize(int size) {
+	public void setSize(String size) {
 		this.size = size;
 	}
 	public boolean isAvelable() {

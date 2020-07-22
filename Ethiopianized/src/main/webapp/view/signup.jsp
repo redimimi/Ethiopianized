@@ -36,7 +36,7 @@
    <input type="text" name ="username"  required placeholder="User Name ..." id="UName"/><br>
  
  <label for="Password"></label> 
-     <input type="password" name = password  required placeholder="Password...." id ="pass"/><br>
+     <input type="password" name = "password"  required placeholder="Password...." id ="pass"/><br>
      
  <label for="cpasssword"></label>
     <input type = "password"  name ="confirm_password" required placeholder="Comform password....." id="cpassword"/><br>
@@ -44,12 +44,33 @@
     
   <label for ="submit"></label>
   
-    <input type="submit"  value ="Sign up">
-    
+    <input type="submit"  value ="Sign up" id="submit-button">
+    <p id ="mess"> </p>
 </form>  
 
 </div>
 <div class="pattern"></div>
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+<script>
+
+$("#submit-button").click(function(e){
+e.preventDefault();
+	var password = $("#pass").val();
+	var cpassword =$("#cpassword").val();
+	
+	if(password != cpassword)
+	{
+		$("#mess").text("Incorrect password").css("color","red");
+	}
+	else {
+		$("#form").trigger("submit");
+	 
+	};
+});
+
+</script>
+
 </body>
 </html>

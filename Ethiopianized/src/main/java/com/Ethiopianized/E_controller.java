@@ -9,20 +9,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.crud.ProductRepo;
 import com.crud.UserRepo;
 import com.pojos.Message;
+import com.pojos.Products;
 import com.pojos.Users;
 
 
 
 @Controller
 public class E_controller {
-
+        @Autowired
+       	ProductRepo pr;
 	///controller to home page 
 	@RequestMapping("/")
 	public String home()
 	{
-		return "home";
+		return"home";
 	}
 	
 	/// Controller to the signup page 
@@ -36,7 +39,7 @@ public class E_controller {
 	
    @Autowired
    UserRepo rep;
-
+   //Proud
  @RequestMapping("/addUser")
  public String addUser(Users User)
  {

@@ -25,7 +25,7 @@
                          <a href="/signup">Sign up</a></li>
                         
                    <li> 
-                        <a href ="/learn">Learn with me </a> <li> 
+                        <a href ="/learn">Learn with me </a> </li> 
 
                 </ul>
                 <div id="cart">

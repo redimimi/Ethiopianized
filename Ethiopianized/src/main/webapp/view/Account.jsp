@@ -12,6 +12,7 @@
 <div class ="pattern"></div>
 <div id ="container">
 <jsp:include page="./components/NavBar.jsp"></jsp:include>
+
 <span> Welcome Back ${customer.username} </span>
 
 <h3>Account information </h3>
