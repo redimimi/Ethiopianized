@@ -3,11 +3,13 @@ package com.pojos;
 import javax.persistence.Entity;
 
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
 @Component 
 @Entity 
+@Table(name="Products")
 public class Products {
 	@Id
 	private int pid;

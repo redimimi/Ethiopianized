@@ -3,7 +3,7 @@
 </head>
 
 <div class="slider center">
-  <div class="slider-div"><img src="/images/DRESS1.jpg" class="slider-picture" alt="dress1">${product.get(0).color} <br >${product.get(0).image}</div>
+  <div class="slider-div"><img src="/images/DRESS1.jpg" class="slider-picture" alt="dress1"><br ></div>
   <div class="slider-div"><img src="/images/DRESS2.jpg" class="slider-picture" alt="dress2"></div>
   <div class="slider-div"><img src="/images/DRESS3.jpg" class="slider-picture" alt="dress3"></div>
   <div class="slider-div"><img src="/images/DRESS1.jpg" class="slider-picture" alt="dress1"></div>
@@ -14,9 +14,16 @@
 <img id="pricelog" src="/images/top.png">
 <div id="price-content">
 	<img src="/images/bottom.png">
-	<div class="info">
+	 <div class="info">
+	    <form action="">
 		<p id="dress-color"></p>
-		<p id="dress-pid"></p> 
+		<p id="dress-pid"></p>
+		<p id ="dress-Pname"></p>
+		<p id ="dress-avelable"></p>
+		<p id ="dress-size"></p>
+		<p id ="dress-price"><p>
+        <input type="button" id ="addto" value="Add To "/> 
+		</form>
 	</div>
 	
 </div>
@@ -71,8 +78,13 @@ $(".slider-picture").click(function(e) {
 		  
 		  $("#dress-color").text(dress.color);
 		  $("#dress-pid").text(dress.pid);
+		  $("#dress-Pname").text(dress.pname);
+		  $("#dress-size").text(dress.size);
+		  $("#dress-price").text(dress.price);
+		  $("#dress-avelable").text(dress.avelable);
 		  
-		  $("#price-content").animate({top: "-265px"}, 100).animate({top: "-15px"}, 300);
+		  
+		  $("#price-content").animate({top: "-320px"}, 100).animate({top: "-15px"}, 350);
 		  
 		  
 	  })
@@ -93,7 +105,7 @@ $(".slider-picture").click(function(e) {
 #pricelog{
     width: 25%;
     height: auto;
-    max-height: 300px;
+    max-height: 350px;
     position: relative;
     z-index: 1;
     background: #fff;
@@ -110,21 +122,45 @@ $(".slider-picture").click(function(e) {
 
 #price-content {
 	position: relative;
-	top: -265px;	
+	top: -310px;	
 }
 
 #price-content img{
 	width: 25%;
 	height: auto;
-	max-height: 300px;
+	max-height: 350px;
 }
 
 .pricecontainer {
 	overflow: hidden;
 }
+
+#addto
+{
+width:125px;
+background-color: transparent;
+box-shadow: none;
+background-image: url("/images/basket.png");
+background-size: 30px;
+background-repeat: no-repeat;
+background-position: right
+}
+
+.slick-active
+{
+outline:none;
+
+}
+.slider-picture {
+box-shadow: 0px 0px 12px 9px rgba(75,42,25,0.45); 
+
+}
+
+.slick-list
+{
+ padding: 40px 60px !important;
+}
 </style>
-
-
 
 
 

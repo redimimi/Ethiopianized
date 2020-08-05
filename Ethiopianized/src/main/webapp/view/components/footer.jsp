@@ -1,35 +1,68 @@
-<div>
 
- <ul class ="footer">
-    <li> 
-       <label for ="email">Email us </label><br>
-       
-            <textarea id="email" name="emailus" rows="2" cols="50" maxlength=100> </textarea><br>
-           
-     </li>
+
+
+<div>
+<form>
+
+  <label for="Mname"> </label>
+    <input type="text" id ="Mname" class ="cmessage" placeholder="Name...."/>
+    
+   <label for="email">  </label>
+     <input type ="text" id="email" class ="cmessage" placeholder="Email Address..."/> 
      
-     <li>
-     <label for="subject">Subject </label><br>
-       
-            <textarea id="subject" name="subject" rows="2" cols="50" maxlength=100> </textarea><br>   
-     </li>
-     <li>
-     <label for ="message">Email us </label><br>
-       
-            <textarea id="message" name="message" rows="4" cols="50" maxlength=100> </textarea><br>
-            
-     </li>
- </ul>
-   
+   <label for="subject"></label>
+     <input type ="text" id="subject" class ="cmessage" placeholder="Subject..."/> <br>
+     
+    <textarea placeholder="write us a brife massage and we will get back to you  ... " rows=6></textarea> <br>
+ 
+   <input type ="submit" value=" Send" id="submitm"/>
+
+</form> 
+
+</div>
+<br>
+<div >
+ <img src="/images/facebook.png" id="social">
+ <img src="/images/inst.png" id="social">
+ <img src="/images/link.png" id="social">
+ <img src="/images/whats.png" id="social">
+ <img src="/images/snap.png" id="social">
 
 </div>
 
+
 <style>
-.footer{
- background-color:#D9CFAF;
- list-style-type:none;
- margin:0;
+
+.cmessage{
+    width: 15%;
+    margin: 5px 0;
+    border: 0px solid #CCB3AE;
+    padding: 5px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.22);
 }
+
+textarea {
+   width: 47%;
+   margin: 5px 0;
+   border: 0px solid #CCB3AE;
+   padding: 5px;
+   box-shadow: 0px 0px 15px rgba(0,0,0,0.22);
+   resize: none;
+   font-family: 'Shadows Into Light', cursive;
+}
+
+textarea:focus {
+	border: 3px solid #CCB3AE;
+	outline: none;
+}
+
+#submitm {
+width: 48%;
+}
+
+#social{
+width:40px;
+}
+
+
 </style>
-
-

@@ -2,12 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
+	
+	
+<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.1.15.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
+</parent>
+	
 	
 	<groupId>com.Ethiopianized</groupId>
 	<artifactId>Cloth</artifactId>
@@ -15,55 +18,80 @@
 	<name>FirstPro-1</name>
 	<description>My_first_webapp</description>
 
+ <!-- java version  -->
+ 
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+	
+	
+ <!-- web starter  -->
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+
+<dependencies>
+
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-web</artifactId>
+</dependency>
         
-          
-           		
+        
+ <!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
+ 
+<dependency>
+    <groupId>org.mariadb.jdbc</groupId>
+    <artifactId>mariadb-java-client</artifactId>
+    <version>2.5.1</version>
+</dependency>
+        
+
+   
+<!-- https://mvnrepository.com/artifact/org.webjars/jasper -->        		
    <dependency>
     <groupId>org.apache.tomcat</groupId>
     <artifactId>tomcat-jasper</artifactId>
     <version>9.0.36</version>
    </dependency>
-                   
+
+               
+ <!-- https://mvnrepository.com/artifact/org.webjars/jquery -->              
+                              
 <dependency>
     <groupId>com.efsavage.jquery</groupId>
     <artifactId>jquery-maven</artifactId>
     <version>1.7.2</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/org.webjars/bootstrap -->
+
+<!-- test -->
 <dependency>
-    <groupId>org.webjars</groupId>
-    <artifactId>bootstrap</artifactId>
-    <version>2.2.1</version>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-test</artifactId>
+	<scope>test</scope>
+</dependency>
+		
+		
+<!-- JPA -->
+	
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+	
+<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+    <version>2.3.1.RELEASE</version>
 </dependency>
 
 
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		
-	</dependencies>
+  	
+
+</dependencies>
+
+<!-- Plug in  -->
 
 	<build>
 		<plugins>

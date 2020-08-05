@@ -14,11 +14,11 @@
 
 <div id ="container">
 <jsp:include page="./components/NavBar.jsp"></jsp:include>
+
 <p> Welcome to the sign up page  </p>
 
-
-
 <p class="message"> ${message.getMname()}</p>
+
 <img src="/images/lo.jpg">
 
  <form action="addUser" method="post" id ="form">

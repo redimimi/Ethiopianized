@@ -3,6 +3,7 @@
 body {
   font-family: 'Shadows Into Light', cursive;
   letter-spacing: 2px;
+   cursor: pointer;
 }
 
 .App {
@@ -76,6 +77,7 @@ margin:5px 0;
 border: 0px solid #CCB3AE;
 padding:5px;
 box-shadow :0px 0px 15px rgba(0,0,0,0.22); 
+font-family: 'Shadows Into Light', cursive;
 
 }
 
@@ -90,5 +92,7 @@ input[type=submit]
 	background-color:#D9CFAF;
 	width:15%;		
 }
-
+ #mainNav {
+    margin-bottom: 70px;
+ }
 

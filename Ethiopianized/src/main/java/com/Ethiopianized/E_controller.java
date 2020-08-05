@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.crud.ProductRepo;
 import com.crud.UserRepo;
 import com.pojos.Message;
-import com.pojos.Products;
+
 import com.pojos.Users;
 
 
@@ -28,13 +28,22 @@ public class E_controller {
 		return"home";
 	}
 	
-	/// Controller to the signup page 
+/// Controller to the signup page 
 	
 	@RequestMapping("signup")
 	public String signup()
 	{
 		return "signup";
 	}
+
+//login page 
+	
+@RequestMapping("login")
+public String login()
+{
+		return "login";
+	}
+	
 //when the sign up from is submitted this register users 
 	
    @Autowired
@@ -94,9 +103,9 @@ public class E_controller {
 	 
 	 Message ms =new Message();
 	 ms.setMname("Your Information has been updated!");
-	 List<Users> user = rep.findByUsername(username);
+	 Users user = rep.findByUsername(username);
 	 
-	 User.setPassword(user.get(0).getPassword());
+	 User.setPassword(user.getPassword());
 	 
 	 Users Customer = new Users();//creating a new object blank object 
 	 
