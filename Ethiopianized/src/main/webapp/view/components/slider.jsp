@@ -141,9 +141,12 @@ width:125px;
 background-color: transparent;
 box-shadow: none;
 background-image: url("/images/basket.png");
-background-size: 30px;
+background-size: 28px;
 background-repeat: no-repeat;
-background-position: right
+background-color: #381706;
+background-position: 90% 10%;
+color: #D6CCB6;
+
 }
 
 .slick-active
@@ -161,7 +164,6 @@ box-shadow: 0px 0px 12px 9px rgba(75,42,25,0.45);
  padding: 40px 60px !important;
 }
 </style>
-
 
 
 

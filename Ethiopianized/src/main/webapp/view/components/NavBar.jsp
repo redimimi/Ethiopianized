@@ -19,7 +19,7 @@
                          <a href=""> About</a> </li>
                         
                     <li >
-                         <a href=""> Contact Us </a> </li>
+                         <a href="#contact-us"> Contact Us </a> </li>
                         
                     <li>
                          <a href="/signup">Sign up</a></li>

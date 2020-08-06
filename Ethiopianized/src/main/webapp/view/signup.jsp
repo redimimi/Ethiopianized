@@ -48,6 +48,12 @@
     <p id ="mess"> </p>
 </form>  
 
+<div>
+<jsp:include page="./components/footer.jsp"></jsp:include>
+</div>
+
+
+
 </div>
 <div class="pattern"></div>
 </div>
@@ -71,6 +77,7 @@ e.preventDefault();
 });
 
 </script>
+
 
 </body>
 </html>
