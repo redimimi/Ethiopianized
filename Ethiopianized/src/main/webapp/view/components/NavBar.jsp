@@ -27,16 +27,18 @@
                    <li>
                          <a href="/login">log in </a></li>
                         
+                        <li>
+                         <a href="/logout">logout </a></li>
                    <li> 
                         <a href ="/learn">Learn with me </a> </li> 
 
                 </ul>
                 <div id="cart">
                     <div>
-                       <a href="Mycart"><img src="./images/basket.png" id="basket" /></a>
+                       <a href="Mycart"><img src="./images/basket.png" id="basket"  /></a>
                     </div>
                     <ul>
-                        <li> My Cart (0)</li>
+                        <li> <a href="Mycart">My Cart (0)</a></li>
                     </ul>
                 </div>
             </nav>

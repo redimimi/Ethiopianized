@@ -1,12 +1,13 @@
 package com.Ethiopianized;
 
 
-import java.util.List;
+import java.security.Principal;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 import org.springframework.web.servlet.ModelAndView;
 
 import com.crud.ProductRepo;
@@ -50,22 +51,42 @@ public String login()
    UserRepo rep;
    //Proud
  @RequestMapping("/addUser")
- public String addUser(Users User)
+ public ModelAndView addUser(Users User)
  {
+	 Message ms = new Message();
+	 
+	 ModelAndView mv =new ModelAndView();
+	 Users user =rep.findByUsername(User.getusername());
+	 
+	 if (user==null) {
 	rep.save(User);
-	return "home";
+	mv.setViewName("login");
+	return mv;
+	}
+	 else {
+		 String message ="This username already exist  ";
+		 ms.setMname(message);
+		 mv.addObject("message",ms);
+		 mv.setViewName("/signup");
+		 return mv;
+	 }
+	
 	 
  }
  /////we will log in user 
  
  @RequestMapping("LoginUser")
- public ModelAndView LoginUser(@RequestParam String password) {
-	
-	 ModelAndView mv = new ModelAndView("Account");
-//	String Uname =user.getUser_name();
-	 List<Users> user = rep.findByPassword(password);
+ public ModelAndView LoginUser(Principal principal) {
    
-	 if (user.isEmpty()) {
+	
+//	 System.out.print(users.getusername());
+	 
+	 ModelAndView mv = new ModelAndView();
+//          String user=users.getusername();
+//          System.out.println(users.getusername());
+	 
+
+	 if (principal == null) {
 		 
 		 Message ms = new Message();
 		 
@@ -78,17 +99,13 @@ public String login()
 		 return mv ;
 	 }else
 	     {
-	 Users Customer = new Users();//creating a new object blank object 
+
+		 Users Cuser= rep.findByUsername(principal.getName());
+		 
 	 
-	 Customer.setusername(user.get(0).getusername());
-	 Customer.setPassword(user.get(0).getPassword());
-	 Customer.setFirst_name(user.get(0).getFirst_name());
-	 Customer.setLast_name(user.get(0).getLast_name());
-	 Customer.setEmail(user.get(0).getEmail());
-	 
-	 System.out.println(Customer.getusername());
-	 mv.addObject("customer",Customer);
-    System.out.println(mv);
+	 mv.addObject("customer", Cuser);
+	 mv.setViewName("Account");
+    //System.out.println(mv);
 	 return mv;
 	
 	
@@ -98,30 +115,35 @@ public String login()
 //update customers data 
  @RequestMapping("Update")
  
- public ModelAndView update(@RequestParam String username,Users User) 
+ public ModelAndView update(Principal principal,Users User) 
  {
 	 
 	 Message ms =new Message();
 	 ms.setMname("Your Information has been updated!");
-	 Users user = rep.findByUsername(username);
+	 Users user = rep.findByUsername(principal.getName());
 	 
-	 User.setPassword(user.getPassword());
-	 
-	 Users Customer = new Users();//creating a new object blank object 
-	 
-	 Customer.setusername(User.getusername());
-	 Customer.setPassword(User.getPassword());
-	 Customer.setFirst_name(User.getFirst_name());
-	 Customer.setLast_name(User.getLast_name());
-	 Customer.setEmail(User.getEmail());
+	// id= User.getId();
+	// Optional<Users> user = rep.findById(id);
 	 
 	 
-	 rep.save(User);
+     //User.setPassword(user.getPassword());
+ 
+   // Users Customer = new Users();//creating a new object blank object 
+ 
+    user.setusername(User.getusername());
+    //user.setPassword(User.getPassword());
+   user.setFirst_name(User.getFirst_name());
+     System.out.print(User.getLast_name());
+   user.setLast_name(User.getLast_name());
+   user.setEmail(User.getEmail());
+	 
+	 
+	 rep.save(user);
 	 
 	 ModelAndView mv = new ModelAndView();
 	 
 	 mv.addObject("message",ms);
-	 mv.addObject("customer",Customer);
+	 mv.addObject("customer",user);
 
 	 mv.setViewName("Account");
 	 
@@ -129,15 +151,18 @@ public String login()
 	 
  }
  
- 
+ 			
  /// this will take us too the learn with me pagae 
- @RequestMapping("/learn")
+@RequestMapping("/learn")
    public String Learn(){
 	   
 	   return("learn");
 	   
 	     
    }
+
+
+ 
  
  @RequestMapping("/Mycart")
    public String Mycart() {

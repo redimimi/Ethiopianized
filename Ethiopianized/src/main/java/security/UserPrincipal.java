@@ -1,28 +1,40 @@
 package security;
 
 import java.util.Collection;
+import java.util.Collections;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public class MyUserDetails implements UserDetails  {
+import com.pojos.Users;
+
+public class UserPrincipal implements UserDetails {
+
+	
+	private Users user;
+	
+	public UserPrincipal(Users user) {
+		super();
+		this.user = user;
+	}
 
 	@Override
-	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		return null;
+	public Collection<? extends GrantedAuthority> getAuthorities() {   ///this is where we get the collation of authority  
+
+		return Collections.singleton(new SimpleGrantedAuthority("User"));
 	}
 
 	@Override
 	public String getPassword() {
 		// TODO Auto-generated method stub
-		return null;
+		return user.getPassword();
 	}
 
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return null;
+		return user.getusername();
 	}
 
 	@Override
@@ -49,5 +61,4 @@ public class MyUserDetails implements UserDetails  {
 		return true;
 	}
 
-	
 }

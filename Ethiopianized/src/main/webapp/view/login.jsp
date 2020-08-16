@@ -19,7 +19,7 @@
 	<p>log in </p>
 	 
 	
-<form action="LoginUser" method="post">
+<form name ="f"  action ="/login"  method="post">
  
      <label for="Uname"></label>
         <input type ="text" placeholder="User Name*......" name="username"  required id ="Uname"> <br>

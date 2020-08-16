@@ -36,7 +36,7 @@
  <input type="submit" value="Update"> 
 </form>
 
-<input type="submit" value ="continue" >
+<a href="/"> <input type="submit" value ="continu shopping" ></a> 
 
 </div>
 <div class ="pattern"></div>

@@ -15,13 +15,16 @@
 <div id="price-content">
 	<img src="/images/bottom.png">
 	 <div class="info">
-	    <form action="">
+	 
+	 
+	    <form action="addedtoCart" method="get">
 		<p id="dress-color"></p>
 		<p id="dress-pid"></p>
 		<p id ="dress-Pname"></p>
 		<p id ="dress-avelable"></p>
 		<p id ="dress-size"></p>
 		<p id ="dress-price"><p>
+		
         <input type="button" id ="addto" value="Add To "/> 
 		</form>
 	</div>

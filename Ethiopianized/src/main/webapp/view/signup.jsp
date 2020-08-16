@@ -68,7 +68,7 @@ e.preventDefault();
 	
 	if(password != cpassword)
 	{
-		$("#mess").text("Incorrect password").css("color","red");
+		$("#mess").text("Password Dosn't much ").css("color","red");
 	}
 	else {
 		$("#form").trigger("submit");

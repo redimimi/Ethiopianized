@@ -26,10 +26,17 @@ public class R_controller {
 	public List<Products> getproductbyimage(@PathVariable String image)
 	{
 		 List<Products> prod = repo.findByImage(image);
-		 
 		 repo.saveAll(prod);
 		 
 	  return prod;	
 	}
+	
+	
+
+	
+	
+	
+	
+	
 
 }
